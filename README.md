@@ -71,9 +71,3 @@ Sure! Here are some of the most commonly used cURL commands for interacting with
   }'
   ```
 
-These commands should cover most of your basic needs for managing and querying Elasticsearch. If you need more specific commands or have any other questions, feel free to ask!¹(https://kb.objectrocket.com/elasticsearch/elasticsearch-cheatsheet-of-the-most-important-curl-requests-252)²(https://www.bmc.com/blogs/elasticsearch-commands/)³(https://www.elastic.co/guide/en/cloud/current/ec-restful-api-command-line.html)
-
-Source: Conversation with Copilot, 11/6/2024
-(1) Elasticsearch Cheatsheet of the Most Important cURL Requests 252. https://kb.objectrocket.com/elasticsearch/elasticsearch-cheatsheet-of-the-most-important-curl-requests-252.
-(2) Curl ElasticSearch Commands Cheat Sheet – BMC Software | Blogs. https://www.bmc.com/blogs/elasticsearch-commands/.
-(3) Access the API from the command line | Elasticsearch Service .... https://www.elastic.co/guide/en/cloud/current/ec-restful-api-command-line.html.
