@@ -1,0 +1,67 @@
+openapi: 3.0.1
+info:
+  title: ElasticSearchApi
+  description: API for interacting with Elasticsearch
+  version: 1.0.0
+paths:
+  /search:
+    get:
+      summary: Search in Elasticsearch
+      parameters:
+        - in: query
+          name: searchText
+          schema:
+            type: string
+          required: true
+          description: The text to search for
+      responses:
+        '200':
+          description: Successful search
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Flight'
+        '400':
+          description: Invalid search text
+        '500':
+          description: Internal server error
+  /create-index:
+    post:
+      summary: Create an index in Elasticsearch
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                indexName:
+                  type: string
+                  description: The name of the index to create
+                file:
+                  type: string
+                  format: binary
+                  description: The JSON file to use for creating the index
+      responses:
+        '201':
+          description: Index created successfully
+        '400':
+          description: Invalid input
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    Flight:
+      type: object
+      properties:
+        name:
+          type: string
+        route:
+          type: string
+        duration_hours:
+          type: number
+          format: float
+        airline:
+          type: string
